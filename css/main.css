@@ -1,1 +1,43 @@
-/*# sourceMappingURL=main.css.map */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.workspace {
+  width: 100%;
+  height: 100vh;
+  background-color: lightgrey;
+}
+.workspace .musicPlayer {
+  padding: 20px;
+  height: 400px;
+  width: 300px;
+  border: 1px solid black;
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.workspace .musicPlayer .artistPhoto {
+  border: 1px solid black;
+  width: 150px;
+  height: 150px;
+  margin: 0 auto;
+  border-radius: 100%;
+}
+.workspace .musicPlayer .description {
+  margin: 20px 0;
+}
+.workspace .musicPlayer .duration {
+  margin: 0 auto;
+  width: 63%;
+}
+.workspace .musicPlayer .duration .progressBar {
+  margin: 0 auto;
+}
+.workspace .musicPlayer .duration .time {
+  display: flex;
+  justify-content: space-between;
+}/*# sourceMappingURL=main.css.map */
