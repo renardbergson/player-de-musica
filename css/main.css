@@ -40,4 +40,7 @@
 .workspace .musicPlayer .duration .time {
   display: flex;
   justify-content: space-between;
+}
+.workspace .musicPlayer .buttons {
+  margin: 10px 0;
 }/*# sourceMappingURL=main.css.map */
