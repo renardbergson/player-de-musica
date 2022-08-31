@@ -8,6 +8,7 @@
   width: 100%;
   height: 100vh;
   background-color: lightgrey;
+  font-family: "Montserrat", sans-serif;
 }
 .workspace .musicPlayer {
   padding: 20px;
@@ -32,6 +33,10 @@
 .workspace .musicPlayer .description {
   margin: 20px 0;
 }
+.workspace .musicPlayer .description h2 {
+  font-size: 20pt;
+  margin: 2px;
+}
 .workspace .musicPlayer .duration-volume {
   margin: 20px auto;
 }
@@ -51,7 +56,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 5px 0;
+  margin: 10px 0;
 }
 .workspace .musicPlayer .duration-volume .volume > i {
   margin-right: 5px;
@@ -66,4 +71,7 @@
 }
 .workspace .musicPlayer .buttons > i {
   font-size: 30pt;
+}
+.workspace .musicPlayer .buttons > i:hover {
+  cursor: pointer;
 }/*# sourceMappingURL=main.css.map */

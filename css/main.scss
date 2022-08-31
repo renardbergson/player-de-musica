@@ -10,6 +10,7 @@ $primary-color: #222;
     width: 100%;
     height: 100vh;
     background-color: lightgrey;
+    font-family: 'Montserrat', sans-serif;;
 
     .musicPlayer {
         padding: 20px;
@@ -36,6 +37,11 @@ $primary-color: #222;
         .description {
             //border: 1px solid black;
             margin: 20px 0;
+
+            h2 {
+                font-size: 20pt;
+                margin: 2px;
+            }
         }
 
         .duration-volume {
@@ -61,7 +67,7 @@ $primary-color: #222;
                 display: flex;
                 align-items: center;
                 justify-content: center;
-                margin: 5px 0;
+                margin: 10px 0;
                 
                 & > i {
                     margin-right: 5px;
@@ -80,6 +86,10 @@ $primary-color: #222;
 
             & > i {
                 font-size: 30pt;
+
+                &:hover {
+                    cursor: pointer;
+                }
             }
         }
     }
