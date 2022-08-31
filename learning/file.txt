@@ -8,4 +8,13 @@ CSS
 
 JS
     Functions: play(), pause ()
-    Properties: .style.display = '...'
+    
+    Properties: 
+        .style.display = '...'
+        .value = ...
+        .duration (returns the value of an element in seconds)
+        .currentTime (returns the current time of an element)
+            .currentTime / .duration = the decimal value of an element
+            (.currentTime / .duration) * 100 + '%' = the percentual value of an element
+        Math.floor() rounds a number DOWN to the nearest integer
+            Math.floor ((.currentTime / .duration) * 100) + '%' is the nearest number integer of an element

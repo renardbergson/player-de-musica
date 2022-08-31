@@ -1,17 +1,23 @@
-let $musica = document.querySelector('audio')
+let $music = document.querySelector('audio')
 const $playButton = document.querySelector('.playButton')
 const $pauseButton = document.querySelector('.pauseButton')
 
+const $progressBar = document.querySelector('.progressBar')
+
 $playButton.addEventListener('click', () => {
-    $musica.play()
+    $music.play()
 
     $pauseButton.style.display = 'block'
     $playButton.style.display = 'none'
 })
 
 $pauseButton.addEventListener('click', () => {
-    $musica.pause()
+    $music.pause()
 
     $playButton.style.display = 'block'
     $pauseButton.style.display = 'none'
+})
+
+$music.addEventListener('timeupdate', () => {
+    $progressBar.value = Math.floor(($music.currentTime / $music.duration) * 100)
 })
