@@ -35,10 +35,23 @@
             margin: 20px 0;
         }
 
-        .duration {
-            margin: 0 auto;
+        .duration-volume {
+            margin: 20px auto;
             //border: 1px solid black;
             width: 63%;
+
+            .volumeBar {
+                display: flex;
+                align-items: center;
+                
+                & > i {
+                    margin-right: 5px;
+                }
+
+                & > input {
+                    width: 90%;
+                }
+            }
 
             .progressBar {
                 margin: 0 auto;

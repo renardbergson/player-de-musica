@@ -1,4 +1,4 @@
 HTML
     Tag Progress and it's atributes: "value" and "end"
     Tag Audio and it's atribute: "src"
-    Tag Input, type "range" and it's atributes, "value" and "range"
+    Tag Input, type "range" and it's atributes, "value", "range" and "value"

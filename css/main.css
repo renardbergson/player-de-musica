@@ -31,14 +31,24 @@
 .workspace .musicPlayer .description {
   margin: 20px 0;
 }
-.workspace .musicPlayer .duration {
-  margin: 0 auto;
+.workspace .musicPlayer .duration-volume {
+  margin: 20px auto;
   width: 63%;
 }
-.workspace .musicPlayer .duration .progressBar {
+.workspace .musicPlayer .duration-volume .volumeBar {
+  display: flex;
+  align-items: center;
+}
+.workspace .musicPlayer .duration-volume .volumeBar > i {
+  margin-right: 5px;
+}
+.workspace .musicPlayer .duration-volume .volumeBar > input {
+  width: 90%;
+}
+.workspace .musicPlayer .duration-volume .progressBar {
   margin: 0 auto;
 }
-.workspace .musicPlayer .duration .time {
+.workspace .musicPlayer .duration-volume .time {
   display: flex;
   justify-content: space-between;
 }
