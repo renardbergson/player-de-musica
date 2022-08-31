@@ -2,6 +2,7 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    touch-action: manipulation;
 }
 
 $primary-color: #222;
@@ -40,7 +41,7 @@ $primary-color: #222;
 
             h2 {
                 font-size: 20pt;
-                margin: 2px;
+                margin: 3px;
             }
         }
 
@@ -90,6 +91,10 @@ $primary-color: #222;
                 &:hover {
                     cursor: pointer;
                 }
+            }
+
+            .pauseButton {
+                display: none;
             }
         }
     }

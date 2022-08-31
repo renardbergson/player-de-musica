@@ -2,6 +2,7 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  touch-action: manipulation;
 }
 
 .workspace {
@@ -35,7 +36,7 @@
 }
 .workspace .musicPlayer .description h2 {
   font-size: 20pt;
-  margin: 2px;
+  margin: 3px;
 }
 .workspace .musicPlayer .duration-volume {
   margin: 20px auto;
@@ -74,4 +75,7 @@
 }
 .workspace .musicPlayer .buttons > i:hover {
   cursor: pointer;
+}
+.workspace .musicPlayer .buttons .pauseButton {
+  display: none;
 }/*# sourceMappingURL=main.css.map */
