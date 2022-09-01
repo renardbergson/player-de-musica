@@ -46,7 +46,7 @@ $primary-color: #222;
         }
 
         .duration-volume {
-            margin: 20px auto;
+            margin: 25px auto;
             //border: 1px solid black;
 
             .progress {
@@ -54,11 +54,12 @@ $primary-color: #222;
                 justify-content: center;
                 align-items: center;
 
-                & > p {
+                .start, .end {
                     font-size: 10pt;
+                    width: 30px;
                 }
 
-                & > input {
+                .progressBar {
                     margin: 0 auto;
                     width: 75%;
                 }
@@ -84,6 +85,7 @@ $primary-color: #222;
             margin: 30px 0;
             display: flex;
             justify-content: space-evenly;
+            align-items: center;
 
             & > i {
                 font-size: 30pt;
@@ -91,6 +93,10 @@ $primary-color: #222;
                 &:hover {
                     cursor: pointer;
                 }
+            }
+
+            .playButton, .pauseButton {
+                font-size: 40pt;
             }
 
             .pauseButton {

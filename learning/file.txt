@@ -18,3 +18,14 @@ JS
             (.currentTime / .duration) * 100 + '%' = the percentual value of an element
         Math.floor() rounds a number DOWN to the nearest integer
             Math.floor ((.currentTime / .duration) * 100) + '%' is the nearest number integer of an element
+
+    How to get MINUTES?
+        - divide (/) minutes per 60 (seconds) and get the result DOWN with Math.floor method
+            ex: 40 / 60 = 0.666...
+            ex: Math.floor(40 / 60) = 0 minutes
+
+    How to get SECONDS?
+        - use the division remainder operator (%) to divide per 60
+            ex: 40 % 60 = 40
+            ex: 60 % 60 = 0
+            * Every number above 60 returns the result 0 and every number under 60 returns itself *
