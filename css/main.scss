@@ -28,11 +28,13 @@ $primary-color: rgba(0, 0, 0, 0.8);
 
         .artistPhoto {
             box-shadow: 0 2px 5px $primary-color;
-            width: 150px;
-            height: 150px;
+            width: 180px;
+            height: 180px;
             margin: 0 auto;
             border-radius: 100%;
-            //overflow: hidden;
+            background-image: url(../images/elton-john.png);
+            background-position: center;
+            background-size: cover;
         }
 
         .description {

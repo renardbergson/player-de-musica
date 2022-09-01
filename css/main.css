@@ -26,10 +26,13 @@
 }
 .workspace .musicPlayer .artistPhoto {
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.8);
-  width: 150px;
-  height: 150px;
+  width: 180px;
+  height: 180px;
   margin: 0 auto;
   border-radius: 100%;
+  background-image: url(../images/elton-john.png);
+  background-position: center;
+  background-size: cover;
 }
 .workspace .musicPlayer .description {
   margin: 20px 0;
