@@ -188,7 +188,9 @@
 .workspace .musicPlayer .musicSpectrum div {
   width: 10px;
   height: 40px;
-  background-color: rgb(190, 190, 190);
+  background-color: rgba(0, 0, 0, 0.8);
+  box-shadow: 0 0 20px white;
+  opacity: 0.2;
   margin: 0 5px;
   border-radius: 5px;
   -webkit-animation: spectrum 800ms infinite cubic-bezier(0.79, 0.14, 0.15, 0.86);

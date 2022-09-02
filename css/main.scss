@@ -178,7 +178,9 @@ $primary-color: rgba(0, 0, 0, 0.8);
             div {
                 width: 10px;
                 height: 40px;
-                background-color: rgb(190, 190, 190);
+                background-color: $primary-color;
+                box-shadow: 0 0 20px white;
+                opacity: 0.2;
                 margin: 0 5px;
                 border-radius: 5px;
                 animation: spectrum 800ms infinite cubic-bezier(.79,.14,.15,.86);
