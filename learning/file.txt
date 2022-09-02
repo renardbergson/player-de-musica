@@ -7,22 +7,25 @@ CSS
     "Touch-action" property
 
 JS
-    Functions: play(), pause ()
+    Functions to review: play(), pause (), getComputedStyle()
     
     Properties: 
         .style.display = (makes the style of an element)
+        style.backgroundImage
         .value = (returns the value of an element)
-        .duration (returns the duration of an element in seconds)
-        .currentTime (returns the current time of an element)
+        .duration = (returns the duration of an element in seconds)
+        .currentTime = (returns the current time of an element)
             .currentTime / .duration = the decimal value of an element
             (.currentTime / .duration) * 100 = the percentual value of an element
         Math.floor() rounds a number DOWN to the nearest integer
             Math.floor ((.currentTime / .duration) * 100) + '%' is the nearest number integer of an element
-        .volume (returns the volume of an element)
+        .volume = (returns the volume of an element)
+        .setatribute = (Add a class attribute to an element)
 
     Events:
         'timeupdate' (executes an action when the current playback position has changed)
         'change' (execute an action when the user changes the selected element)
+        'loadeddata' (...)
 
     How to get MINUTES?
         - divide (/) minutes per 60 (seconds) and get the result DOWN with Math.floor method
