@@ -154,6 +154,19 @@ $primary-color: rgba(0, 0, 0, 0.8);
             }
         }
 
+        .whoAmI {
+            a {
+                text-decoration: none;
+                color: $primary-color;
+                font-size: 10pt;
+
+                &:hover {
+                    cursor: pointer;
+                    text-shadow: 0 0 10px white;
+                }
+            }
+        }
+
         .musicSpectrum {
             //border: 1px solid black;
             height: 40px;

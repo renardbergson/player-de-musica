@@ -51,6 +51,10 @@ let playlist = [
     }
 ]
 
+// footer variables  
+const $whoAmI = document.querySelector('.whoAmI') //.style.display = 'none'
+const $musicSpectrum = document.querySelector('.musicSpectrum') //.style.display = 'flex'
+
 // load page reset function
 document.body.onload = () => {
     $progressBar.value = 0
@@ -70,6 +74,9 @@ $playButton.addEventListener('click', () => {
 
     $pauseButton.style.display = 'block'
     $playButton.style.display = 'none'
+
+    $whoAmI.style.display = 'none'
+    $musicSpectrum.style.display = 'flex'
 })
 
 // pause button function
@@ -78,6 +85,9 @@ $pauseButton.addEventListener('click', () => {
 
     $playButton.style.display = 'block'
     $pauseButton.style.display = 'none'
+
+    $whoAmI.style.display = 'block'
+    $musicSpectrum.style.display = 'none'
 })
 
 // time convert function 
