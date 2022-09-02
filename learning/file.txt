@@ -23,9 +23,9 @@ JS
         .setatribute = (Add a class attribute to an element)
 
     Events:
-        'timeupdate' (executes an action when the current playback position has changed)
-        'change' (execute an action when the user changes the selected element)
-        'loadeddata' (...)
+        'ontimeupdate' (executes an action when the current playback position has changed)
+        'onchange' (execute an action when the user changes the selected element)
+        'onloadeddata' (executes an action when data for the current item is available)
 
     How to get MINUTES?
         - divide (/) minutes per 60 (seconds) and get the result DOWN with Math.floor method
