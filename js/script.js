@@ -1,21 +1,23 @@
+// music
 let $music = document.querySelector('audio')
+const $currentTime = document.querySelector('.start')
+const $progressBar = document.querySelector('.progressBar')
+const $duration = document.querySelector('.end')
+const $volumeBar = document.querySelector('.volumeBar')
+let musicIndex = 0
 
+// buttons
 const $backwardButton = document.querySelector('.backwardButton')
 const $playButton = document.querySelector('.playButton')
 const $pauseButton = document.querySelector('.pauseButton')
 const $forwardButton = document.querySelector('.forwardButton')
 
-const $currentTime = document.querySelector('.start')
-const $progressBar = document.querySelector('.progressBar')
-const $duration = document.querySelector('.end')
-
-const $volumeBar = document.querySelector('.volumeBar')
-
-let musicIndex = 0
+// artist info
 let $artistPhoto = document.querySelector('.artistPhoto')
 let $songName = document.querySelector('.songName')
 let $artistName = document.querySelector('.artistName')
 
+// playlist
 let playlist = [
     {
         src: 'music/cold-heart-EltonJohn.mp3',
@@ -37,23 +39,26 @@ let playlist = [
     }
 ]
 
-// reset function
+// load page function
 document.body.onload = () => {
     $progressBar.value = 0
     $volumeBar.value = 100
 
-    $songName.innerHTML = playlist[0].title
-    $artistName.innerHTML = playlist[0].artist
+    $songName.innerText = playlist[0].title
+    $artistName.innerText = playlist[0].artist
 }
 
-// play and pause button functions
+// play button function
 $playButton.addEventListener('click', () => {
     $music.play()
+    
+    currentAndTotalTimeRefresh()
 
     $pauseButton.style.display = 'block'
     $playButton.style.display = 'none'
 })
 
+// pause button function
 $pauseButton.addEventListener('click', () => {
     $music.pause()
 
@@ -61,7 +66,7 @@ $pauseButton.addEventListener('click', () => {
     $pauseButton.style.display = 'none'
 })
 
-// time update and convert functions
+// time convert function 
 function secondsToMinutes (timeToConvert) {
     let minute = Math.floor(timeToConvert / 60)
     let seconds = timeToConvert % 60
@@ -73,19 +78,23 @@ function secondsToMinutes (timeToConvert) {
     return `${minute}:${seconds}`
 }
 
+// music current and total time refresh function
+function currentAndTotalTimeRefresh() {
+    $currentTime.innerText = secondsToMinutes(Math.floor($music.currentTime))
+    $duration.innerText = secondsToMinutes(Math.floor($music.duration))
+}
+
+// progress bar movement function
 $music.addEventListener('timeupdate', () => {
     $progressBar.value = Math.floor(($music.currentTime / $music.duration) * 100)
-
-    $currentTime.innerHTML = secondsToMinutes( Math.floor($music.currentTime) )
-    $duration.innerHTML = secondsToMinutes( Math.floor($music.duration) )
 })
 
-// progress bar change function
+// music slider function
 $progressBar.addEventListener('change', () => {
     $music.currentTime = ($progressBar.value / 100) * $music.duration
 })
 
-// volume change function
+// volume slider function
 $volumeBar.addEventListener('change', () => {
     $music.volume = $volumeBar.value / 100
 })
@@ -95,9 +104,10 @@ function musicChange(index) {
     $music.setAttribute('src', playlist[index].src)
     $music.addEventListener('loadeddata', () => {
         $artistPhoto.style.backgroundImage = playlist[index].img
-        $songName.innerHTML = playlist[index].title
-        $artistName.innerHTML = playlist[index].artist
-        $duration.innerHTML = secondsToMinutes( Math.floor($music.duration) )
+        $songName.innerText = playlist[index].title
+        $artistName.innerText = playlist[index].artist
+        
+        currentAndTotalTimeRefresh()
         
         $music.play()
         $pauseButton.style.display = 'block'
@@ -105,7 +115,7 @@ function musicChange(index) {
     })
 }
 
-// music backward and forward
+// backward button function
 $backwardButton.addEventListener('click', () => {
     musicIndex--
 
@@ -114,8 +124,10 @@ $backwardButton.addEventListener('click', () => {
     }
 
     musicChange(musicIndex)
+    $progressBar.value = 0
 })
 
+// forward button function
 $forwardButton.addEventListener('click', () => {
     musicIndex++
 
