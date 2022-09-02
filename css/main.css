@@ -36,9 +36,13 @@
 }
 .workspace .musicPlayer .description {
   margin: 20px 0;
+  height: 15%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 .workspace .musicPlayer .description h2 {
-  font-size: 20pt;
+  font-size: 20px;
   margin: 3px;
 }
 .workspace .musicPlayer .duration-volume {
