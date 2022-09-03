@@ -33,8 +33,8 @@ funcional, através do JavaScript.
   Confira mais informações a respeito neste link: [Safari HTML5 Audio and Video Guide](https://developer.apple.com/library/archive/documentation/AudioVideo/Conceptual/Using_HTML5_Audio_Video/Device-SpecificConsiderations/Device-SpecificConsiderations.html#//apple_ref/doc/uid/TP40009523-CH5-SW1)
   
 ### Preview
-Este é um pequeno preview de demonstração das operações básicas em funcionamento <br>
-![]( ... ) 
+Este é um pequeno preview de demonstração do player em funcionamento <br>
+![](https://github.com/renardbergson/player-de-musica/blob/master/images/gif-player-de-musica.gif) 
 
 ### Link
   •	[Player de Música](https://renardbergson.github.io/player-de-musica/) 
