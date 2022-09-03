@@ -52,8 +52,8 @@ let playlist = [
 ]
 
 // footer variables  
-const $whoAmI = document.querySelector('.whoAmI') //.style.display = 'none'
-const $musicSpectrum = document.querySelector('.musicSpectrum') //.style.display = 'flex'
+const $whoAmI = document.querySelector('.whoAmI')
+const $musicSpectrum = document.querySelector('.musicSpectrum')
 
 // load page reset function
 document.body.onload = () => {
@@ -69,8 +69,6 @@ document.body.onload = () => {
 // play button function
 $playButton.addEventListener('click', () => {
     $music.play()
-    
-    currentAndTotalTimeRefresh()
 
     $pauseButton.style.display = 'block'
     $playButton.style.display = 'none'
@@ -92,7 +90,7 @@ $pauseButton.addEventListener('click', () => {
 
 // time convert function 
 function secondsToMinutes (timeToConvert) {
-    let minute = Math.floor(timeToConvert / 60)
+    let minute = parseInt(timeToConvert / 60)
     let seconds = timeToConvert % 60
 
     if (seconds < 10) {
@@ -102,15 +100,19 @@ function secondsToMinutes (timeToConvert) {
     return `${minute}:${seconds}`
 }
 
-// music current and total time refresh function
-function currentAndTotalTimeRefresh() {
-    $currentTime.innerText = secondsToMinutes(Math.floor($music.currentTime))
-    $duration.innerHTML = secondsToMinutes(Math.floor($music.duration))
-}
+// music current time update function
+$music.addEventListener('timeupdate', () => {
+    $currentTime.innerText = secondsToMinutes( parseInt(($music.currentTime)) )
+})
+
+// music total time refresh function
+$music.addEventListener('loadeddata', () => {
+    $duration.innerText = secondsToMinutes( parseInt($music.duration) )
+})
 
 // progress bar movement function
 $music.addEventListener('timeupdate', () => {
-    $progressBar.value = Math.floor(($music.currentTime / $music.duration) * 100)
+    $progressBar.value = parseInt( ($music.currentTime / $music.duration) * 100 )
 })
 
 // music slider function
@@ -131,9 +133,8 @@ function musicChange(index) {
         $songName.innerText = playlist[index].title
         $artistName.innerText = playlist[index].artist
         
-        currentAndTotalTimeRefresh()
-        
         $music.play()
+        
         $pauseButton.style.display = 'block'
         $playButton.style.display = 'none'
     })

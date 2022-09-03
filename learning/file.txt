@@ -37,3 +37,7 @@ JS
             ex: 40 % 60 = 40
             ex: 60 % 60 = 0
             * Every number above 60 returns the result 0 and every number under 60 returns itself *
+
+    Problems founded and solved
+        - current time needs to be in a "timeupdate" event 
+        - total time needs to be in a "loadeddata" event
