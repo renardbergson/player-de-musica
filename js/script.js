@@ -73,8 +73,7 @@ $playButton.addEventListener('click', () => {
     $pauseButton.style.display = 'block'
     $playButton.style.display = 'none'
 
-    $whoAmI.style.display = 'none'
-    $musicSpectrum.style.display = 'flex'
+    spectrumPlay()
 })
 
 // pause button function
@@ -84,8 +83,7 @@ $pauseButton.addEventListener('click', () => {
     $playButton.style.display = 'block'
     $pauseButton.style.display = 'none'
 
-    $whoAmI.style.display = 'block'
-    $musicSpectrum.style.display = 'none'
+    spectrumOff()
 })
 
 // time convert function 
@@ -134,9 +132,6 @@ function musicChange(index) {
         $artistName.innerText = playlist[index].artist
         
         $music.play()
-        
-        $pauseButton.style.display = 'block'
-        $playButton.style.display = 'none'
     })
 }
 
@@ -149,6 +144,7 @@ $backwardButton.addEventListener('click', () => {
     }
 
     musicChange(musicIndex)
+    spectrumPlay()
 })
 
 // forward button function
@@ -160,4 +156,16 @@ $forwardButton.addEventListener('click', () => {
     }
 
     musicChange(musicIndex)
+    spectrumPlay()
 })
+
+// animation functions
+function spectrumPlay () {
+    $whoAmI.style.display = 'none'
+    $musicSpectrum.style.display = 'flex'
+}
+
+function spectrumOff () {
+    $whoAmI.style.display = 'block'
+    $musicSpectrum.style.display = 'none'
+}
