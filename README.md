@@ -37,7 +37,7 @@ Este é um pequeno preview de demonstração das operações básicas em funcion
 ![]( ... ) 
 
 ### Link
-  •	[Player de Música]( ... ) 
+  •	[Player de Música](https://renardbergson.github.io/player-de-musica/) 
 
 ### Autor
   •	Renard Bergson 🤓 <br>
