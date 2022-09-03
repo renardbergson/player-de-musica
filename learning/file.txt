@@ -41,3 +41,4 @@ JS
     Problems founded and solved
         - current time needs to be in a "timeupdate" event 
         - total time needs to be in a "loadeddata" event
+        - input type "range" works better with events type "input" in JS

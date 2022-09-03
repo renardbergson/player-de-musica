@@ -123,12 +123,12 @@ $music.addEventListener('timeupdate', () => {
 })
 
 // music slider function
-$progressBar.addEventListener('change', () => {
+$progressBar.addEventListener('input', () => {
     $music.currentTime = ($progressBar.value / 100) * $music.duration
 })
 
 // volume slider function
-$volumeBar.addEventListener('change', () => {
+$volumeBar.addEventListener('input', () => {
     $music.volume = $volumeBar.value / 100
 })
 
@@ -139,8 +139,6 @@ function musicChange(index) {
         $artistPhoto.style.backgroundImage = playlist[index].bkg
         $songName.innerText = playlist[index].title
         $artistName.innerText = playlist[index].artist
-        
-        $music.play()
     })
 }
 
@@ -153,6 +151,7 @@ $backwardButton.addEventListener('click', () => {
     }
 
     musicChange(musicIndex)
+    $music.play()
     hidePlayBtn()
     spectrumPlay()
 })
@@ -166,6 +165,7 @@ $forwardButton.addEventListener('click', () => {
     }
 
     musicChange(musicIndex)
+    $music.play()
     hidePlayBtn()
     spectrumPlay()
 })
