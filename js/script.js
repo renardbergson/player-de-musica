@@ -66,12 +66,22 @@ document.body.onload = () => {
     $artistName.innerText = playlist[0].artist
 }
 
+// play and pause switch functions
+function showPlayBtn () {
+    $playButton.style.display = 'block'
+    $pauseButton.style.display = 'none'
+}
+
+function hidePlayBtn () {
+    $pauseButton.style.display = 'block'
+    $playButton.style.display = 'none'
+}
+
 // play button function
 $playButton.addEventListener('click', () => {
     $music.play()
 
-    $pauseButton.style.display = 'block'
-    $playButton.style.display = 'none'
+    hidePlayBtn()
 
     spectrumPlay()
 })
@@ -80,8 +90,7 @@ $playButton.addEventListener('click', () => {
 $pauseButton.addEventListener('click', () => {
     $music.pause()
 
-    $playButton.style.display = 'block'
-    $pauseButton.style.display = 'none'
+    showPlayBtn()
 
     spectrumOff()
 })
@@ -144,6 +153,7 @@ $backwardButton.addEventListener('click', () => {
     }
 
     musicChange(musicIndex)
+    hidePlayBtn()
     spectrumPlay()
 })
 
@@ -156,6 +166,7 @@ $forwardButton.addEventListener('click', () => {
     }
 
     musicChange(musicIndex)
+    hidePlayBtn()
     spectrumPlay()
 })
 
