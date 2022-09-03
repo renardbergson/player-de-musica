@@ -21,6 +21,7 @@ JS
             Math.floor ((.currentTime / .duration) * 100) + '%' is the nearest number integer of an element
         .volume = (returns the volume of an element)
         .setatribute = (Add a class attribute to an element)
+        .click() = simulates a mouse-click on an element
 
     Events:
         'ontimeupdate' (executes an action when the current playback position has changed)

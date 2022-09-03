@@ -170,6 +170,11 @@ $forwardButton.addEventListener('click', () => {
     spectrumPlay()
 })
 
+// auto-play the next song function
+$music.addEventListener('ended', () => {
+    $forwardButton.click()
+})
+
 // animation functions
 function spectrumPlay () {
     $whoAmI.style.display = 'none'
