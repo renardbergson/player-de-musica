@@ -12,57 +12,55 @@
   <title>Music Player</title>
 </head>
 <body>
-    <div class="workspace">
-        <div class="musicPlayer">
-            <div class="artistPhoto">
-               <!-- background from CSS and JS -->
+    <div class="musicPlayer">
+        <div class="artistPhoto">
+           <!-- background from CSS and JS -->
+        </div>
+
+        <div class="description">
+            <h2 class="songName"> <!-- info from JavaScript --> </h2>
+            <i class="artistName"> <!-- info from JavaScript --> </i>
+        </div>
+
+        <div class="duration-volume">
+            <div class="progress">
+                <p class="start"> --:-- </p>
+                <input type="range" class="progressBar">
+                <p class="end"> --:-- </p>
             </div>
 
-            <div class="description">
-                <h2 class="songName"> <!-- info from JavaScript --> </h2>
-                <i class="artistName"> <!-- info from JavaScript --> </i>
+            <div class="volume">
+                <i class="fa-solid fa-volume-low" style="font-size: 12px;"></i>
+                <input type="range" class="volumeBar">
+                <i class="fa-solid fa-volume-high" style="font-size: 11px;"></i>
             </div>
+        </div>
 
-            <div class="duration-volume">
-                <div class="progress">
-                    <p class="start"> --:-- </p>
-                    <input type="range" class="progressBar">
-                    <p class="end"> --:-- </p>
-                </div>
+        <div class="buttons">
+            <i class="fa-solid fa-backward-step backwardButton"></i>
+            <i class="fa-solid fa-circle-play playButton"></i>
+            <i class="fa-solid fa-circle-pause pauseButton"></i>
+            <i class="fa-solid fa-forward-step forwardButton"></i>
+        </div>
 
-                <div class="volume">
-                    <i class="fa-solid fa-volume-low" style="font-size: 12px;"></i>
-                    <input type="range" class="volumeBar">
-                    <i class="fa-solid fa-volume-high" style="font-size: 11px;"></i>
-                </div>
-            </div>
+        <audio> <!-- audio from JavaScript --> </audio>
+        
+        <div class="whoAmI">
+            <a href="https://www.github.com/renardbergson" target="_blank">
+                <i class="fa-brands fa-github-alt"></i>
+                Renard Bergson
+            </a>
+        </div>
 
-            <div class="buttons">
-                <i class="fa-solid fa-backward-step backwardButton"></i>
-                <i class="fa-solid fa-circle-play playButton"></i>
-                <i class="fa-solid fa-circle-pause pauseButton"></i>
-                <i class="fa-solid fa-forward-step forwardButton"></i>
-            </div>
-
-            <audio> <!-- audio from JavaScript --> </audio>
-            
-            <div class="whoAmI">
-                <a href="https://www.github.com/renardbergson" target="_blank">
-                    <i class="fa-brands fa-github-alt"></i>
-                    Renard Bergson
-                </a>
-            </div>
-
-            <div class="musicSpectrum">
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-            </div>
+        <div class="musicSpectrum">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
         </div>
     </div>
 

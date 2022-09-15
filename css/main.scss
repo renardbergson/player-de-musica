@@ -1,222 +1,171 @@
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    touch-action: manipulation;
-}
+@import 'base.scss';
+@import 'variables.scss';
+@import 'animations.scss';
 
-@keyframes spectrum {
-    0% {
-        height: 2px;
-    }
-    10% {
-        height: 5px;
-    }
-    20% {
-        height: 9px;
-    }
-    30% {
-        height: 13px;
-    }
-    40% {
-        height: 17px;
-    }
-    50% {
-        height: 21px;
-    }
-    60% {
-        height: 25px;
-    }
-    70% {
-        height: 29px;
-    }
-    80% {
-        height: 33px;
-    }
-    90% {
-        height: 36px;
-    }
-    100% {
-        height: 40px;
-    }
-}
+.musicPlayer {
+    padding: 20px;
+    height: 550px;
+    width: 300px;
+    color: $primary-color;
+    box-shadow: 0 5px 10px $primary-color;
+    border-radius: 15px;
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 
-$primary-color: rgba(0, 0, 0, 0.8);
+    .artistPhoto {
+        box-shadow: 0 2px 5px $primary-color;
+        width: 180px;
+        height: 180px;
+        margin: 0 auto;
+        border-radius: 100%;
+        background-image: url(/* bkg from JavaScript */);
+        background-position: center;
+        background-size: cover;
+    }
 
-.workspace {
-    width: 100%;
-    height: 100vh;
-    background-color: lightgrey;
-    font-family: 'Montserrat', sans-serif;;
+    .description {
+        margin: 20px 0;
+        height: 15%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
 
-    .musicPlayer {
-        padding: 20px;
-        height: 550px;
-        width: 300px;
-        color: $primary-color;
-        box-shadow: 0 5px 10px $primary-color;
-        border-radius: 15px;
-        text-align: center;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-
-        .artistPhoto {
-            box-shadow: 0 2px 5px $primary-color;
-            width: 180px;
-            height: 180px;
-            margin: 0 auto;
-            border-radius: 100%;
-            background-image: url(/* bkg from JavaScript */);
-            background-position: center;
-            background-size: cover;
+        h2 {
+            font-size: 20px;
+            margin: 3px;
         }
+    }
 
-        .description {
-            //border: 1px solid black;
-            margin: 20px 0;
-            height: 15%;
+    .duration-volume {
+        margin: 25px auto;
+
+        .progress {
             display: flex;
-            flex-direction: column;
             justify-content: center;
-
-            h2 {
-                font-size: 20px;
-                margin: 3px;
-            }
-        }
-
-        .duration-volume {
-            margin: 25px auto;
-            //border: 1px solid black;
-
-            .progress {
-                display: flex;
-                justify-content: center;
-                align-items: center;
-
-                .start, .end {
-                    font-size: 10pt;
-                    width: 30px;
-                }
-
-                .progressBar {
-                    margin: 0 auto;
-                    width: 75%;
-                }
-            }
-
-            .volume {
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                margin: 10px 0;
-                
-                & > i:first-child {
-                    margin-right: 5px;
-                    opacity: 0.8;
-                }
-
-                & > i:last-child {
-                    margin-left: 5px;
-                    opacity: 0.8;
-                }
-
-                & > input {
-                    width: 50%;
-                }
-            }
-        }
-
-        .buttons {
-            margin: 30px 0;
-            display: flex;
-            justify-content: space-evenly;
             align-items: center;
-            opacity: 0.8;
 
-            & > i {
-                font-size: 30pt;
-
-                &:hover {
-                    cursor: pointer;
-                    color: black;
-                }
-            }
-
-            .playButton, .pauseButton {
-                font-size: 40pt;
-            }
-
-            .pauseButton {
-                display: none;
-            }
-        }
-
-        .whoAmI {
-            a {
-                text-decoration: none;
-                color: $primary-color;
+            .start, .end {
                 font-size: 10pt;
+                width: 30px;
+            }
 
-                &:hover {
-                    cursor: pointer;
-                    text-shadow: 0 0 10px white;
-                }
+            .progressBar {
+                margin: 0 auto;
+                width: 75%;
             }
         }
 
-        .musicSpectrum {
-            //border: 1px solid black;
-            height: 40px;
+        .volume {
             display: flex;
-            justify-content: center;
             align-items: center;
+            justify-content: center;
+            margin: 10px 0;
+            
+            & > i:first-child {
+                margin-right: 5px;
+                opacity: 0.8;
+            }
+
+            & > i:last-child {
+                margin-left: 5px;
+                opacity: 0.8;
+            }
+
+            & > input {
+                width: 50%;
+            }
+        }
+    }
+
+    .buttons {
+        margin: 30px 0;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        opacity: 0.8;
+
+        & > i {
+            font-size: 30pt;
+
+            &:hover {
+                cursor: pointer;
+                color: black;
+            }
+        }
+
+        .playButton, .pauseButton {
+            font-size: 40pt;
+        }
+
+        .pauseButton {
             display: none;
+        }
+    }
 
-            div {
-                width: 10px;
-                height: 40px;
-                background-color: $primary-color;
-                box-shadow: 0 0 20px white;
-                opacity: 0.2;
-                margin: 0 5px;
-                border-radius: 5px;
-                animation: spectrum 800ms infinite cubic-bezier(.79,.14,.15,.86);
-            }
+    .whoAmI {
+        a {
+            text-decoration: none;
+            color: $primary-color;
+            font-size: 10pt;
 
-            & div:nth-child(1) {
-                animation-duration: 1.8s;
+            &:hover {
+                cursor: pointer;
+                text-shadow: 0 0 10px white;
             }
+        }
+    }
 
-            & div:nth-child(2) {
-                animation-duration: 1.7s;
-            }
+    .musicSpectrum {
+        height: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        display: none;
 
-            & div:nth-child(3) {
-                animation-duration: 1.6s;
-            }
+        div {
+            width: 10px;
+            height: 40px;
+            background-color: $primary-color;
+            box-shadow: 0 0 20px white;
+            opacity: 0.2;
+            margin: 0 5px;
+            border-radius: 5px;
+            animation: spectrum 800ms infinite cubic-bezier(.79,.14,.15,.86);
+        }
 
-            & div:nth-child(4) {
-                animation-duration: 2s;
-            }
+        & div:nth-child(1) {
+            animation-duration: 1.8s;
+        }
 
-            & div:nth-child(5) {
-                animation-duration: 1.3s;
-            }
+        & div:nth-child(2) {
+            animation-duration: 1.7s;
+        }
 
-            & div:nth-child(6) {
-                animation-duration: 1.6s;
-            }
+        & div:nth-child(3) {
+            animation-duration: 1.6s;
+        }
 
-            & div:nth-child(7) {
-                animation-duration: 1.7s;
-            }
+        & div:nth-child(4) {
+            animation-duration: 2s;
+        }
 
-            & div:nth-child(8) {
-                animation-duration: 1.8s;
-            }
+        & div:nth-child(5) {
+            animation-duration: 1.3s;
+        }
+
+        & div:nth-child(6) {
+            animation-duration: 1.6s;
+        }
+
+        & div:nth-child(7) {
+            animation-duration: 1.7s;
+        }
+
+        & div:nth-child(8) {
+            animation-duration: 1.8s;
         }
     }
 }
