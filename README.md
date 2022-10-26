@@ -37,7 +37,7 @@ Este é um pequeno preview de demonstração do player em funcionamento <br>
 ![](https://github.com/renardbergson/player-de-musica/blob/master/images/gif-player-de-musica.gif) 
 
 ### Link
-  •	[Player de Música](https://renardbergson.github.io/player-de-musica/) 
+  •	[Player de Música](https://player-de-musica-rb.netlify.app) 
 
 ### Autor
   •	Renard Bergson 🤓 <br>
