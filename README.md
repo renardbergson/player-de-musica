@@ -41,6 +41,6 @@ Este é um pequeno preview de demonstração do player em funcionamento <br>
 
 ### Autor
   •	Renard Bergson 🤓 <br>
-	•	renardrock@gmail.com <br>
+	•	contato@renardb.com <br>
 	•	[LinkedIn](https://www.linkedin.com/in/renardbergson) <br>
 	•	[GitHub](https://www.github.com/renardbergson)
